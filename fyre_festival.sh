@@ -1,5 +1,8 @@
 #!/bin/bash
 
+cat ascii.txt
+echo "What can go wrong?"
+
 ipcalc() {
    echo $(/usr/bin/ipcalc -nb "$1" | grep -E "$2" | cut -d ' ' -f 4)
 }

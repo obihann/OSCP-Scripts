@@ -4,3 +4,5 @@ Machines/*
 *.xml
 *.nmap
 *.gnmap
+Logs/*
+*.swp

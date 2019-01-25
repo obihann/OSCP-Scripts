@@ -9,10 +9,12 @@ NETWORK=$(ipcalc $1 "Network")
 HOSTMIN=$(ipcalc $1 "HostMin")
 HOSTMAX=$(ipcalc $1 "HostMax")
 
-echo "Ping Sweep"
 IPS=$(./ICMP/sweep.sh $HOSTMIN $HOSTMAX)
 
+echo "Live Hosts:"
 for ip in $IPS; do 
+   echo $ip
+
    mkdir -p Machines/$ip/Scanning \
       Machines/$ip/Enumeration \
       Machines/$ip/Exploitation \
@@ -21,5 +23,6 @@ for ip in $IPS; do
       Machines/$ip/Post-Exploitation \
       Machines/$ip/Loot
 
-   ./DNS/server_finder.sh live_ips_$(date +%Y%m%d).txt $NETWORK
 done
+  
+./DNS/server_finder.sh ./Logs/live_ips_$(date +%Y%m%d).txt $NETWORK

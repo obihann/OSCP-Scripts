@@ -5,7 +5,7 @@ B=$(echo $1 | cut -f 2 -d '.')
 C=$(echo $1 | cut -f 3 -d '.')
 MIN=$(echo $1 | cut -f 4 -d '.')
 MAX=$(echo $2 | cut -f 4 -d '.')
-OUT=live_ips_$(date +%Y%m%d).txt
+OUT=./Logs/live_ips_$(date +%Y%m%d).txt
 
 touch $OUT
 echo '' > $OUT

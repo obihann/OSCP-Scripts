@@ -1,0 +1,6 @@
+Machines/*
+*.log
+*.txt
+*.xml
+*.nmap
+*.gnmap

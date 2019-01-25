@@ -22,6 +22,4 @@ for ip in $IPS; do
       Machines/$ip/Loot
 
    ./DNS/server_finder.sh live_ips_$(date +%Y%m%d).txt $NETWORK
-   # ./TCP/nmap.sh $ip &
-   # (echo "nmap light scan - $ip"; nmap -sT --top-ports 10 -T5 --open -oA Machines/$ip/Scanning/nmap_tcp_light_$ip_$(date +%Y%m%d.%s) $ip) &
 done
